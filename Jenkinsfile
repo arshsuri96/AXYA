@@ -8,7 +8,7 @@ node
  
  stage("Build Docker Image")
  {
-    sh "docker build -t arsh1/k8:${buildNumber} ."
+    sh "docker build -t arsh1/k8:${buildNumber} --platform linux/x86_64 ."
  }
  
   stage("Build Login and Push")
